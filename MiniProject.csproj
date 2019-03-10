@@ -52,19 +52,45 @@
     <Compile Include="Advisor.Designer.cs">
       <DependentUpon>Advisor.cs</DependentUpon>
     </Compile>
+    <Compile Include="DbConnect.cs" />
+    <Compile Include="Evaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evaluation.Designer.cs">
+      <DependentUpon>Evaluation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyHome.Designer.cs">
+      <DependentUpon>MyHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StdRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StdRecords.Designer.cs">
+      <DependentUpon>StdRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
     <EmbeddedResource Include="Advisor.resx">
       <DependentUpon>Advisor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Evaluation.resx">
+      <DependentUpon>Evaluation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyHome.resx">
+      <DependentUpon>MyHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +101,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StdRecords.resx">
+      <DependentUpon>StdRecords.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

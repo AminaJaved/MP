@@ -28,81 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.instructorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluateIndividualsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // menuStrip1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Home";
+            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeToolStripMenuItem,
+            this.instructorToolStripMenuItem,
+            this.studentToolStripMenuItem,
+            this.evaluationToolStripMenuItem,
+            this.evaluateIndividualsToolStripMenuItem});
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.menuStrip1.Location = new System.Drawing.Point(9, 9);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(129, 258);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // label2
+            // homeToolStripMenuItem
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Instructor";
+            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
-            // label3
+            // instructorToolStripMenuItem
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Student";
+            this.instructorToolStripMenuItem.Name = "instructorToolStripMenuItem";
+            this.instructorToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.instructorToolStripMenuItem.Text = "Instructor";
             // 
-            // label4
+            // studentToolStripMenuItem
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 153);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Evaluation";
+            this.studentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addStudentsToolStripMenuItem,
+            this.studentRecordToolStripMenuItem});
+            this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.studentToolStripMenuItem.Text = "Student";
             // 
-            // label5
+            // evaluationToolStripMenuItem
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 197);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Evaluate Individuals";
+            this.evaluationToolStripMenuItem.Name = "evaluationToolStripMenuItem";
+            this.evaluationToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.evaluationToolStripMenuItem.Text = "Evaluation";
+            // 
+            // evaluateIndividualsToolStripMenuItem
+            // 
+            this.evaluateIndividualsToolStripMenuItem.Name = "evaluateIndividualsToolStripMenuItem";
+            this.evaluateIndividualsToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.evaluateIndividualsToolStripMenuItem.Text = "Evaluate Individuals";
+            // 
+            // addStudentsToolStripMenuItem
+            // 
+            this.addStudentsToolStripMenuItem.Name = "addStudentsToolStripMenuItem";
+            this.addStudentsToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.addStudentsToolStripMenuItem.Text = "Add Students";
+            this.addStudentsToolStripMenuItem.Click += new System.EventHandler(this.addStudentsToolStripMenuItem_Click);
+            // 
+            // studentRecordToolStripMenuItem
+            // 
+            this.studentRecordToolStripMenuItem.Name = "studentRecordToolStripMenuItem";
+            this.studentRecordToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.studentRecordToolStripMenuItem.Text = "Student Record";
+            this.studentRecordToolStripMenuItem.Click += new System.EventHandler(this.studentRecordToolStripMenuItem_Click);
             // 
             // MyHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(524, 261);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MyHome";
             this.Text = "MyHome";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem instructorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem evaluationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem evaluateIndividualsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addStudentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem studentRecordToolStripMenuItem;
     }
 }
