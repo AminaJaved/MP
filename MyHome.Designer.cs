@@ -32,10 +32,10 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.instructorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.evaluationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.evaluateIndividualsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluateIndividualsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +69,8 @@
             // 
             this.instructorToolStripMenuItem.Name = "instructorToolStripMenuItem";
             this.instructorToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
-            this.instructorToolStripMenuItem.Text = "Instructor";
+            this.instructorToolStripMenuItem.Text = "Advisor";
+            this.instructorToolStripMenuItem.Click += new System.EventHandler(this.instructorToolStripMenuItem_Click);
             // 
             // studentToolStripMenuItem
             // 
@@ -79,18 +80,7 @@
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
             this.studentToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
             this.studentToolStripMenuItem.Text = "Student";
-            // 
-            // evaluationToolStripMenuItem
-            // 
-            this.evaluationToolStripMenuItem.Name = "evaluationToolStripMenuItem";
-            this.evaluationToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
-            this.evaluationToolStripMenuItem.Text = "Evaluation";
-            // 
-            // evaluateIndividualsToolStripMenuItem
-            // 
-            this.evaluateIndividualsToolStripMenuItem.Name = "evaluateIndividualsToolStripMenuItem";
-            this.evaluateIndividualsToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
-            this.evaluateIndividualsToolStripMenuItem.Text = "Evaluate Individuals";
+            this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
             // 
             // addStudentsToolStripMenuItem
             // 
@@ -105,6 +95,18 @@
             this.studentRecordToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.studentRecordToolStripMenuItem.Text = "Student Record";
             this.studentRecordToolStripMenuItem.Click += new System.EventHandler(this.studentRecordToolStripMenuItem_Click);
+            // 
+            // evaluationToolStripMenuItem
+            // 
+            this.evaluationToolStripMenuItem.Name = "evaluationToolStripMenuItem";
+            this.evaluationToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.evaluationToolStripMenuItem.Text = "Evaluation";
+            // 
+            // evaluateIndividualsToolStripMenuItem
+            // 
+            this.evaluateIndividualsToolStripMenuItem.Name = "evaluateIndividualsToolStripMenuItem";
+            this.evaluateIndividualsToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.evaluateIndividualsToolStripMenuItem.Text = "Evaluate Individuals";
             // 
             // MyHome
             // 

@@ -50,5 +50,17 @@ namespace MiniProject
             l.Show();
             this.Hide();
         }
+
+        private void studentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void instructorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Advisor l = Advisor.getInstance();
+            l.Show();
+            this.Hide();
+        }
     }
 }

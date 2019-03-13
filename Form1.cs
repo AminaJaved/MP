@@ -54,7 +54,7 @@ namespace MiniProject
                 String contact = textBox3.Text;
                 String email = textBox4.Text;
                 DateTime db = dateTimePicker1.Value;
-                int x = 0;
+                
                 int gender;
                 if (radioButton1.Checked == true)
                 {
@@ -62,7 +62,7 @@ namespace MiniProject
                 }
                 else
                 {
-                    gender = x;
+                    gender = 2;
                 }
 
 
@@ -78,6 +78,11 @@ namespace MiniProject
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             DbConnect.getInstance().closeConnection();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
