@@ -41,10 +41,8 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.menuStrip1.AutoSize = false;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.instructorToolStripMenuItem,
@@ -52,11 +50,12 @@
             this.evaluationToolStripMenuItem,
             this.evaluateIndividualsToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(9, 9);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(129, 258);
+            this.menuStrip1.Size = new System.Drawing.Size(115, 261);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // homeToolStripMenuItem
             // 
@@ -101,11 +100,12 @@
             this.evaluationToolStripMenuItem.Name = "evaluationToolStripMenuItem";
             this.evaluationToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
             this.evaluationToolStripMenuItem.Text = "Evaluation";
+            this.evaluationToolStripMenuItem.Click += new System.EventHandler(this.evaluationToolStripMenuItem_Click);
             // 
             // evaluateIndividualsToolStripMenuItem
             // 
             this.evaluateIndividualsToolStripMenuItem.Name = "evaluateIndividualsToolStripMenuItem";
-            this.evaluateIndividualsToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.evaluateIndividualsToolStripMenuItem.Size = new System.Drawing.Size(108, 19);
             this.evaluateIndividualsToolStripMenuItem.Text = "Evaluate Individuals";
             // 
             // MyHome
@@ -117,6 +117,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MyHome";
             this.Text = "MyHome";
+            this.Load += new System.EventHandler(this.MyHome_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

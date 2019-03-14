@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MiniProject
 {
@@ -18,6 +19,8 @@ namespace MiniProject
             InitializeComponent();
             DbConnect.getInstance().ConnectionString = "Data Source=DESKTOP-TOIHAAB;Initial Catalog=ProjectA;User ID=sa;Password=java";
         }
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-TOIHAAB;Initial Catalog=ProjectA;Persist Security Info=True;User ID=sa;Password=java");
+        public int studendID { get; set; }
         public static Form1 getInstance()
         {
             if (l == null)
@@ -30,6 +33,14 @@ namespace MiniProject
             {
                 return l;
             }
+        }
+        private void cleartextBox()
+        {
+            studendID = 0;
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
         }
         private void homeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -83,6 +94,69 @@ namespace MiniProject
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (studendID > 0)
+            {
+                SqlCommand cmd = new SqlCommand("Update Person SET FirstName= @FirstName,LastName=@LastName,Contact=@Contact,Email=@Email,DateOfBirth=@DateOfBirth,Gender=@Gender where Id=@ID ", con);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@FirstName", textBox1.Text);
+                cmd.Parameters.AddWithValue("@LastName", textBox2.Text);
+                cmd.Parameters.AddWithValue("@Contact", textBox3.Text);
+                cmd.Parameters.AddWithValue("@Email", textBox4.Text);
+                cmd.Parameters.AddWithValue("@ID", this.studendID);
+                cmd.Parameters.AddWithValue("@DateOfBirth", dateTimePicker1.Value);
+                int gender;
+                if (radioButton1.Checked == true)
+                {
+                    gender = 1;
+                }
+                else
+                {
+                    gender = 2;
+                }
+                cmd.Parameters.AddWithValue("@Gender", gender);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("The Record is Updated Successfully", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                
+                cleartextBox();
+            }
+            else
+            {
+                MessageBox.Show("Wil you please Select a Student for updation", "Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (studendID > 0)
+            {
+                SqlCommand cmd = new SqlCommand("Delete Person where Id=@ID ", con);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@ID", this.studendID);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Deleted Successfully", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                
+                cleartextBox();
+            }
+            else
+            {
+                MessageBox.Show("Select a Student to Delete", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

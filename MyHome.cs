@@ -62,5 +62,23 @@ namespace MiniProject
             l.Show();
             this.Hide();
         }
+
+        private void evaluationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Evaluation l = Evaluation.getInstance();
+            l.Show();
+            this.Hide();
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void MyHome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
