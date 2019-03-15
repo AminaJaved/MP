@@ -65,9 +65,7 @@ namespace MiniProject
 
         private void evaluationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Evaluation l = Evaluation.getInstance();
-            l.Show();
-            this.Hide();
+
 
         }
 
@@ -98,6 +96,41 @@ namespace MiniProject
         private void projectRecordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProRecords l = ProRecords.getInstance();
+            l.Show();
+            this.Hide();
+
+        }
+
+        private void groupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Group l = Group.getInstance();
+            l.Show();
+            this.Hide();
+
+        }
+
+        private void evaluationToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Evaluation l = Evaluation.getInstance();
+            l.Show();
+            this.Hide();
+        }
+
+        private void groupEvaluationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GroupEvaluation l = GroupEvaluation.getInstance();
+            l.Show();
+            this.Hide();
+        }
+
+        private void evaluateIndividualsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void projectAdvisorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProjectAdvisor l = ProjectAdvisor.getInstance();
             l.Show();
             this.Hide();
 

@@ -35,14 +35,15 @@
             this.addStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.evaluationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.evaluateIndividualsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.projectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupEvaluationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.projectAdvisorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -54,12 +55,12 @@
             this.instructorToolStripMenuItem,
             this.studentToolStripMenuItem,
             this.evaluationToolStripMenuItem,
-            this.evaluateIndividualsToolStripMenuItem,
-            this.projectToolStripMenuItem});
+            this.projectToolStripMenuItem,
+            this.groupToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(3, 54);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(125, 198);
+            this.menuStrip1.Size = new System.Drawing.Size(104, 198);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -104,28 +105,13 @@
             // 
             // evaluationToolStripMenuItem
             // 
+            this.evaluationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.groupEvaluationToolStripMenuItem,
+            this.evaluationToolStripMenuItem1});
             this.evaluationToolStripMenuItem.Name = "evaluationToolStripMenuItem";
-            this.evaluationToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
-            this.evaluationToolStripMenuItem.Text = "Evaluation";
+            this.evaluationToolStripMenuItem.Size = new System.Drawing.Size(118, 19);
+            this.evaluationToolStripMenuItem.Text = "Evaluate";
             this.evaluationToolStripMenuItem.Click += new System.EventHandler(this.evaluationToolStripMenuItem_Click);
-            // 
-            // evaluateIndividualsToolStripMenuItem
-            // 
-            this.evaluateIndividualsToolStripMenuItem.Name = "evaluateIndividualsToolStripMenuItem";
-            this.evaluateIndividualsToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
-            this.evaluateIndividualsToolStripMenuItem.Text = "Evaluate Individuals";
-            // 
-            // toolStripContainer1
-            // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(150, 150);
-            this.toolStripContainer1.Location = new System.Drawing.Point(3, 87);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(150, 175);
-            this.toolStripContainer1.TabIndex = 7;
-            this.toolStripContainer1.Text = "toolStripContainer1";
             // 
             // label1
             // 
@@ -141,9 +127,10 @@
             // 
             this.projectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addProjectToolStripMenuItem,
-            this.projectRecordsToolStripMenuItem});
+            this.projectRecordsToolStripMenuItem,
+            this.projectAdvisorToolStripMenuItem});
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
-            this.projectToolStripMenuItem.Size = new System.Drawing.Size(118, 19);
+            this.projectToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
             this.projectToolStripMenuItem.Text = "Project";
             this.projectToolStripMenuItem.Click += new System.EventHandler(this.projectToolStripMenuItem_Click);
             // 
@@ -161,6 +148,34 @@
             this.projectRecordsToolStripMenuItem.Text = "Project Records";
             this.projectRecordsToolStripMenuItem.Click += new System.EventHandler(this.projectRecordsToolStripMenuItem_Click);
             // 
+            // groupToolStripMenuItem
+            // 
+            this.groupToolStripMenuItem.Name = "groupToolStripMenuItem";
+            this.groupToolStripMenuItem.Size = new System.Drawing.Size(118, 19);
+            this.groupToolStripMenuItem.Text = "Group";
+            this.groupToolStripMenuItem.Click += new System.EventHandler(this.groupToolStripMenuItem_Click);
+            // 
+            // groupEvaluationToolStripMenuItem
+            // 
+            this.groupEvaluationToolStripMenuItem.Name = "groupEvaluationToolStripMenuItem";
+            this.groupEvaluationToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.groupEvaluationToolStripMenuItem.Text = "Group Evaluation";
+            this.groupEvaluationToolStripMenuItem.Click += new System.EventHandler(this.groupEvaluationToolStripMenuItem_Click);
+            // 
+            // evaluationToolStripMenuItem1
+            // 
+            this.evaluationToolStripMenuItem1.Name = "evaluationToolStripMenuItem1";
+            this.evaluationToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
+            this.evaluationToolStripMenuItem1.Text = "Evaluation";
+            this.evaluationToolStripMenuItem1.Click += new System.EventHandler(this.evaluationToolStripMenuItem1_Click);
+            // 
+            // projectAdvisorToolStripMenuItem
+            // 
+            this.projectAdvisorToolStripMenuItem.Name = "projectAdvisorToolStripMenuItem";
+            this.projectAdvisorToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.projectAdvisorToolStripMenuItem.Text = "Project Advisor";
+            this.projectAdvisorToolStripMenuItem.Click += new System.EventHandler(this.projectAdvisorToolStripMenuItem_Click);
+            // 
             // MyHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,15 +183,12 @@
             this.ClientSize = new System.Drawing.Size(524, 261);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.toolStripContainer1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MyHome";
             this.Text = "MyHome";
             this.Load += new System.EventHandler(this.MyHome_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,13 +200,15 @@
         private System.Windows.Forms.ToolStripMenuItem instructorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem evaluationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem evaluateIndividualsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addStudentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem studentRecordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem projectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addProjectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem projectRecordsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem groupEvaluationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem groupToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem evaluationToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem projectAdvisorToolStripMenuItem;
     }
 }

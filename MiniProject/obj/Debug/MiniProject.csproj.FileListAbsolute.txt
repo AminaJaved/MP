@@ -13,3 +13,6 @@ D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.MyHome.resource
 D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.StdRecords.resources
 D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.Project.resources
 D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.ProRecords.resources
+D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.Group.resources
+D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.GroupEvaluation.resources
+D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.ProjectAdvisor.resources
