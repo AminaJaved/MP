@@ -19,7 +19,7 @@ namespace MiniProject
             InitializeComponent();
             DbConnect.getInstance().ConnectionString = "Data Source=DESKTOP-TOIHAAB;Initial Catalog=ProjectA;User ID=sa;Password=java";
         }
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-TOIHAAB;Initial Catalog=ProjectA;Persist Security Info=True;User ID=sa;Password=java");
+        SqlConnection connect = new SqlConnection("Data Source=DESKTOP-TOIHAAB;Initial Catalog=ProjectA;Persist Security Info=True;User ID=sa;Password=java");
         public int studendID { get; set; }
         public static Form1 getInstance()
         {
@@ -58,6 +58,7 @@ namespace MiniProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            connect.Open();
             try
             {
                 String firstname = textBox1.Text;
@@ -65,7 +66,7 @@ namespace MiniProject
                 String contact = textBox3.Text;
                 String email = textBox4.Text;
                 DateTime db = dateTimePicker1.Value;
-                
+
                 int gender;
                 if (radioButton1.Checked == true)
                 {
@@ -76,15 +77,27 @@ namespace MiniProject
                     gender = 2;
                 }
 
+                String str = String.Format("INSERT INTO Person(FirstName,LastName,Contact,Email,DateOfBirth,Gender) values('{0}','{1}','{2}','{3}','{4}','{5}' )", firstname, lastname, contact, email, db, gender);
+                int rows = DbConnect.getInstance().exectuteQuery(str);
 
-                String cmd = String.Format("INSERT INTO Person(FirstName,LastName,Contact,Email,DateOfBirth,Gender) values('{0}','{1}','{2}','{3}','{4}','{5}' )", firstname, lastname, contact, email, db, gender);
-                int rows = DbConnect.getInstance().exectuteQuery(cmd);
+                SqlCommand sc = new SqlCommand("select IDENT_CURRENT('Person')", connect);
+                int s = Convert.ToInt32(sc.ExecuteScalar());
+
+                SqlCommand sc1 = new SqlCommand("Insert into Student Values (@Id,@RegistrationNo)", connect);
+                sc1.CommandType = CommandType.Text;
+                sc1.Parameters.AddWithValue("@Id", s);
+                sc1.Parameters.AddWithValue("@RegistrationNo", textBox5.Text);
+                sc1.ExecuteNonQuery();
+                connect.Close();
+
                 MessageBox.Show(String.Format("{0} rows affected", rows));
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -100,14 +113,14 @@ namespace MiniProject
         {
             if (studendID > 0)
             {
-                SqlCommand cmd = new SqlCommand("Update Person SET FirstName= @FirstName,LastName=@LastName,Contact=@Contact,Email=@Email,DateOfBirth=@DateOfBirth,Gender=@Gender where Id=@ID ", con);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@FirstName", textBox1.Text);
-                cmd.Parameters.AddWithValue("@LastName", textBox2.Text);
-                cmd.Parameters.AddWithValue("@Contact", textBox3.Text);
-                cmd.Parameters.AddWithValue("@Email", textBox4.Text);
-                cmd.Parameters.AddWithValue("@ID", this.studendID);
-                cmd.Parameters.AddWithValue("@DateOfBirth", dateTimePicker1.Value);
+                SqlCommand sc = new SqlCommand("Update Person SET FirstName= @FirstName,LastName=@LastName,Contact=@Contact,Email=@Email,DateOfBirth=@DateOfBirth,Gender=@Gender where Id=@ID ", connect);
+                sc.CommandType = CommandType.Text;
+                sc.Parameters.AddWithValue("@FirstName", textBox1.Text);
+                sc.Parameters.AddWithValue("@LastName", textBox2.Text);
+                sc.Parameters.AddWithValue("@Contact", textBox3.Text);
+                sc.Parameters.AddWithValue("@Email", textBox4.Text);
+                sc.Parameters.AddWithValue("@ID", this.studendID);
+                sc.Parameters.AddWithValue("@DateOfBirth", dateTimePicker1.Value);
                 int gender;
                 if (radioButton1.Checked == true)
                 {
@@ -117,10 +130,10 @@ namespace MiniProject
                 {
                     gender = 2;
                 }
-                cmd.Parameters.AddWithValue("@Gender", gender);
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
+                sc.Parameters.AddWithValue("@Gender", gender);
+                connect.Open();
+                sc.ExecuteNonQuery();
+                connect.Close();
                 MessageBox.Show("The Record is Updated Successfully", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 
@@ -141,13 +154,13 @@ namespace MiniProject
         {
             if (studendID > 0)
             {
-                SqlCommand cmd = new SqlCommand("Delete Person where Id=@ID ", con);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@ID", this.studendID);
+                SqlCommand sc = new SqlCommand("Delete Person where Id=@ID ", connect);
+                sc.CommandType = CommandType.Text;
+                sc.Parameters.AddWithValue("@ID", this.studendID);
 
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
+                connect.Open();
+                sc.ExecuteNonQuery();
+                connect.Close();
                 MessageBox.Show("Record Deleted Successfully", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 

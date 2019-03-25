@@ -65,5 +65,10 @@ namespace MiniProject
             h.Show();
             this.Hide();
         }
+
+        private void Group_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

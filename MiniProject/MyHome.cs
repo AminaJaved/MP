@@ -103,9 +103,7 @@ namespace MiniProject
 
         private void groupToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Group l = Group.getInstance();
-            l.Show();
-            this.Hide();
+
 
         }
 
@@ -131,6 +129,30 @@ namespace MiniProject
         private void projectAdvisorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProjectAdvisor l = ProjectAdvisor.getInstance();
+            l.Show();
+            this.Hide();
+
+        }
+
+        private void createGroupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddGroup l = AddGroup.getInstance();
+            l.Show();
+            this.Hide();
+
+        }
+
+        private void addGroupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Group l = Group.getInstance();
+            l.Show();
+            this.Hide();
+
+        }
+
+        private void groupProjectsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Group_Project l = Group_Project.getInstance();
             l.Show();
             this.Hide();
 

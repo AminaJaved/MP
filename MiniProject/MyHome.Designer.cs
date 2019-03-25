@@ -35,14 +35,17 @@
             this.addStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.evaluationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.groupEvaluationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.projectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupEvaluationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.evaluationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.projectAdvisorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.createGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,14 +71,14 @@
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // instructorToolStripMenuItem
             // 
             this.instructorToolStripMenuItem.Name = "instructorToolStripMenuItem";
-            this.instructorToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.instructorToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
             this.instructorToolStripMenuItem.Text = "Advisor";
             this.instructorToolStripMenuItem.Click += new System.EventHandler(this.instructorToolStripMenuItem_Click);
             // 
@@ -85,7 +88,7 @@
             this.addStudentsToolStripMenuItem,
             this.studentRecordToolStripMenuItem});
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
             this.studentToolStripMenuItem.Text = "Student";
             this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
             // 
@@ -109,26 +112,31 @@
             this.groupEvaluationToolStripMenuItem,
             this.evaluationToolStripMenuItem1});
             this.evaluationToolStripMenuItem.Name = "evaluationToolStripMenuItem";
-            this.evaluationToolStripMenuItem.Size = new System.Drawing.Size(118, 19);
+            this.evaluationToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
             this.evaluationToolStripMenuItem.Text = "Evaluate";
             this.evaluationToolStripMenuItem.Click += new System.EventHandler(this.evaluationToolStripMenuItem_Click);
             // 
-            // label1
+            // groupEvaluationToolStripMenuItem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(424, 25);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "FYP Management System(Mini Project)";
+            this.groupEvaluationToolStripMenuItem.Name = "groupEvaluationToolStripMenuItem";
+            this.groupEvaluationToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.groupEvaluationToolStripMenuItem.Text = "Group Evaluation";
+            this.groupEvaluationToolStripMenuItem.Click += new System.EventHandler(this.groupEvaluationToolStripMenuItem_Click);
+            // 
+            // evaluationToolStripMenuItem1
+            // 
+            this.evaluationToolStripMenuItem1.Name = "evaluationToolStripMenuItem1";
+            this.evaluationToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
+            this.evaluationToolStripMenuItem1.Text = "Evaluation";
+            this.evaluationToolStripMenuItem1.Click += new System.EventHandler(this.evaluationToolStripMenuItem1_Click);
             // 
             // projectToolStripMenuItem
             // 
             this.projectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addProjectToolStripMenuItem,
             this.projectRecordsToolStripMenuItem,
-            this.projectAdvisorToolStripMenuItem});
+            this.projectAdvisorToolStripMenuItem,
+            this.groupProjectsToolStripMenuItem});
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
             this.projectToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
             this.projectToolStripMenuItem.Text = "Project";
@@ -148,33 +156,53 @@
             this.projectRecordsToolStripMenuItem.Text = "Project Records";
             this.projectRecordsToolStripMenuItem.Click += new System.EventHandler(this.projectRecordsToolStripMenuItem_Click);
             // 
-            // groupToolStripMenuItem
-            // 
-            this.groupToolStripMenuItem.Name = "groupToolStripMenuItem";
-            this.groupToolStripMenuItem.Size = new System.Drawing.Size(118, 19);
-            this.groupToolStripMenuItem.Text = "Group";
-            this.groupToolStripMenuItem.Click += new System.EventHandler(this.groupToolStripMenuItem_Click);
-            // 
-            // groupEvaluationToolStripMenuItem
-            // 
-            this.groupEvaluationToolStripMenuItem.Name = "groupEvaluationToolStripMenuItem";
-            this.groupEvaluationToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.groupEvaluationToolStripMenuItem.Text = "Group Evaluation";
-            this.groupEvaluationToolStripMenuItem.Click += new System.EventHandler(this.groupEvaluationToolStripMenuItem_Click);
-            // 
-            // evaluationToolStripMenuItem1
-            // 
-            this.evaluationToolStripMenuItem1.Name = "evaluationToolStripMenuItem1";
-            this.evaluationToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
-            this.evaluationToolStripMenuItem1.Text = "Evaluation";
-            this.evaluationToolStripMenuItem1.Click += new System.EventHandler(this.evaluationToolStripMenuItem1_Click);
-            // 
             // projectAdvisorToolStripMenuItem
             // 
             this.projectAdvisorToolStripMenuItem.Name = "projectAdvisorToolStripMenuItem";
             this.projectAdvisorToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.projectAdvisorToolStripMenuItem.Text = "Project Advisor";
             this.projectAdvisorToolStripMenuItem.Click += new System.EventHandler(this.projectAdvisorToolStripMenuItem_Click);
+            // 
+            // groupToolStripMenuItem
+            // 
+            this.groupToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createGroupToolStripMenuItem,
+            this.addGroupToolStripMenuItem});
+            this.groupToolStripMenuItem.Name = "groupToolStripMenuItem";
+            this.groupToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
+            this.groupToolStripMenuItem.Text = "Group";
+            this.groupToolStripMenuItem.Click += new System.EventHandler(this.groupToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(53, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(424, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "FYP Management System(Mini Project)";
+            // 
+            // createGroupToolStripMenuItem
+            // 
+            this.createGroupToolStripMenuItem.Name = "createGroupToolStripMenuItem";
+            this.createGroupToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.createGroupToolStripMenuItem.Text = "Create Group";
+            this.createGroupToolStripMenuItem.Click += new System.EventHandler(this.createGroupToolStripMenuItem_Click);
+            // 
+            // addGroupToolStripMenuItem
+            // 
+            this.addGroupToolStripMenuItem.Name = "addGroupToolStripMenuItem";
+            this.addGroupToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addGroupToolStripMenuItem.Text = "Add Group";
+            this.addGroupToolStripMenuItem.Click += new System.EventHandler(this.addGroupToolStripMenuItem_Click);
+            // 
+            // groupProjectsToolStripMenuItem
+            // 
+            this.groupProjectsToolStripMenuItem.Name = "groupProjectsToolStripMenuItem";
+            this.groupProjectsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.groupProjectsToolStripMenuItem.Text = "Group Projects";
+            this.groupProjectsToolStripMenuItem.Click += new System.EventHandler(this.groupProjectsToolStripMenuItem_Click);
             // 
             // MyHome
             // 
@@ -210,5 +238,8 @@
         private System.Windows.Forms.ToolStripMenuItem groupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem evaluationToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem projectAdvisorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createGroupToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addGroupToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem groupProjectsToolStripMenuItem;
     }
 }
