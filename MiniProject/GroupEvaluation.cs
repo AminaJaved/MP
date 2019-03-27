@@ -61,5 +61,30 @@ namespace MiniProject
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void GroupEvaluation_Load(object sender, EventArgs e)
+        {
+            SqlConnection connect = new SqlConnection("Data Source=DESKTOP-TOIHAAB;Initial Catalog=ProjectA;Persist Security Info=True;User ID=sa;Password=java");
+            connect.Open();
+            string s = "Select Id from [Group]";
+            SqlCommand sc = new SqlCommand(s, connect);
+            SqlDataReader sdr = sc.ExecuteReader();
+            while (sdr.Read())
+            {
+                string id = sdr[0].ToString();
+                comboBox1.Items.Add(id);
+            }
+            sdr.Close();
+
+            string s1 = "Select Id from Evaluation";
+            SqlCommand sc1 = new SqlCommand(s1, connect);
+            SqlDataReader sdr1 = sc1.ExecuteReader();
+            while (sdr1.Read())
+            {
+                string id = sdr1[0].ToString();
+                comboBox2.Items.Add(id);
+            }
+            sdr1.Close();
+        }
     }
 }

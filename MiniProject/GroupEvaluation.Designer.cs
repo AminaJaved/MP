@@ -43,19 +43,14 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Professor",
-            "Associate Professor",
-            "Lecturer",
-            "Industry Professional"});
-            this.comboBox2.Location = new System.Drawing.Point(176, 75);
+            this.comboBox2.Location = new System.Drawing.Point(136, 75);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(152, 21);
             this.comboBox2.TabIndex = 40;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(176, 172);
+            this.dateTimePicker1.Location = new System.Drawing.Point(136, 172);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(152, 20);
             this.dateTimePicker1.TabIndex = 39;
@@ -71,7 +66,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(176, 128);
+            this.textBox1.Location = new System.Drawing.Point(136, 132);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(152, 20);
             this.textBox1.TabIndex = 36;
@@ -107,7 +102,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(253, 226);
+            this.button1.Location = new System.Drawing.Point(213, 226);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 43;
@@ -127,7 +122,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(176, 23);
+            this.comboBox1.Location = new System.Drawing.Point(136, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(152, 21);
             this.comboBox1.TabIndex = 45;
@@ -136,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 261);
+            this.ClientSize = new System.Drawing.Size(319, 287);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -149,6 +144,7 @@
             this.Controls.Add(this.label2);
             this.Name = "GroupEvaluation";
             this.Text = "GroupEvaluation";
+            this.Load += new System.EventHandler(this.GroupEvaluation_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

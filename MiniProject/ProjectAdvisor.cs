@@ -42,16 +42,52 @@ namespace MiniProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection connect = new SqlConnection(ConnectionString);
+            SqlConnection connect = new SqlConnection("Data Source=DESKTOP-TOIHAAB;Initial Catalog=ProjectA;Persist Security Info=True;User ID=sa;Password=java");
             connect.Open();
-            if (connect.State == ConnectionState.Open)
-            {
-                string s = "INSERT INTO ProjectAdvisor(AdvisorId,ProjectId, AdvisorRole,AssignmentDate)VALUES('" + comboBox1.Text + "','" + comboBox2.Text + "', (SELECT Id FROM Lookup WHERE Lookup.Value = '" + (comboBox3.Text) + "') ,'" + Convert.ToDateTime(dateTimePicker1.Value) + "');";
-                SqlCommand cmd = new SqlCommand(s, connect);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Data Inserted Successfully");
+            string sl = "Select Id from Lookup where Value = '" + comboBox3.Text + "'";
+            SqlCommand scd = new SqlCommand(sl, connect);
+            int i = (int)scd.ExecuteScalar();
+            string s = "Insert into ProjectAdvisor(AdvisorId,ProjectId, AdvisorRole,AssignmentDate) values ('" + comboBox1.Text + "', '" + comboBox2.Text + "','" + i + "','" + dateTimePicker1.Value + "')";
+            SqlCommand sc = new SqlCommand(s, connect);
+            sc.ExecuteNonQuery();
+            connect.Close();
+            MessageBox.Show("Hurray its Added sucessfully");
+            //SqlConnection connect = new SqlConnection(ConnectionString);
+            //connect.Open();
+            //if (connect.State == ConnectionState.Open)
+            //{
 
+            //    string s = "INSERT INTO ProjectAdvisor(AdvisorId,ProjectId, AdvisorRole,AssignmentDate)VALUES('" + comboBox1.Text + "','" + comboBox2.Text + "', (SELECT Id FROM Lookup WHERE Lookup.Value = '" + (comboBox3.Text) + "') ,'" + Convert.ToDateTime(dateTimePicker1.Value) + "');";
+            //    SqlCommand cmd = new SqlCommand(s, connect);
+            //    cmd.ExecuteNonQuery();
+            //    MessageBox.Show("Data Inserted Successfully");
+
+            //}
+        }
+
+        private void ProjectAdvisor_Load(object sender, EventArgs e)
+        {
+            SqlConnection connect = new SqlConnection("Data Source=DESKTOP-TOIHAAB;Initial Catalog=ProjectA;Persist Security Info=True;User ID=sa;Password=java");
+            connect.Open();
+            string s = "Select Id from Advisor";
+            SqlCommand sc = new SqlCommand(s, connect);
+            SqlDataReader sdr = sc.ExecuteReader();
+            while (sdr.Read())
+            {
+                string id = sdr[0].ToString();
+                comboBox1.Items.Add(id);
             }
+            sdr.Close();
+
+            string s1 = "Select Id from Project";
+            SqlCommand sc1 = new SqlCommand(s1, connect);
+            SqlDataReader sdr1 = sc1.ExecuteReader();
+            while (sdr1.Read())
+            {
+                string id = sdr1[0].ToString();
+                comboBox2.Items.Add(id);
+            }
+            sdr1.Close();
         }
     }
 }

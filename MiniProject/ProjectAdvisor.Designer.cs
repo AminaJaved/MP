@@ -62,11 +62,6 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Professor",
-            "Associate Professor",
-            "Lecturer",
-            "Industry Professional"});
             this.comboBox2.Location = new System.Drawing.Point(169, 65);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(152, 21);
@@ -119,10 +114,9 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
-            "Professor",
-            "Associate Professor",
-            "Lecturer",
-            "Industry Professional"});
+            "Main-Advisor ",
+            "Co-Advisor",
+            "Industry Advisor"});
             this.comboBox3.Location = new System.Drawing.Point(169, 117);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(152, 21);
@@ -155,6 +149,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ProjectAdvisor";
             this.Text = "ProjectAdvisor";
+            this.Load += new System.EventHandler(this.ProjectAdvisor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

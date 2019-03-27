@@ -41,12 +41,14 @@
             this.addProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projectAdvisorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.createGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -61,9 +63,9 @@
             this.projectToolStripMenuItem,
             this.groupToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(3, 54);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(104, 198);
+            this.menuStrip1.Size = new System.Drawing.Size(104, 104);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -163,6 +165,13 @@
             this.projectAdvisorToolStripMenuItem.Text = "Project Advisor";
             this.projectAdvisorToolStripMenuItem.Click += new System.EventHandler(this.projectAdvisorToolStripMenuItem_Click);
             // 
+            // groupProjectsToolStripMenuItem
+            // 
+            this.groupProjectsToolStripMenuItem.Name = "groupProjectsToolStripMenuItem";
+            this.groupProjectsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.groupProjectsToolStripMenuItem.Text = "Group Projects";
+            this.groupProjectsToolStripMenuItem.Click += new System.EventHandler(this.groupProjectsToolStripMenuItem_Click);
+            // 
             // groupToolStripMenuItem
             // 
             this.groupToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -172,6 +181,20 @@
             this.groupToolStripMenuItem.Size = new System.Drawing.Size(97, 19);
             this.groupToolStripMenuItem.Text = "Group";
             this.groupToolStripMenuItem.Click += new System.EventHandler(this.groupToolStripMenuItem_Click);
+            // 
+            // createGroupToolStripMenuItem
+            // 
+            this.createGroupToolStripMenuItem.Name = "createGroupToolStripMenuItem";
+            this.createGroupToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.createGroupToolStripMenuItem.Text = "Create Group";
+            this.createGroupToolStripMenuItem.Click += new System.EventHandler(this.createGroupToolStripMenuItem_Click);
+            // 
+            // addGroupToolStripMenuItem
+            // 
+            this.addGroupToolStripMenuItem.Name = "addGroupToolStripMenuItem";
+            this.addGroupToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.addGroupToolStripMenuItem.Text = "Add Group";
+            this.addGroupToolStripMenuItem.Click += new System.EventHandler(this.addGroupToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -183,33 +206,25 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "FYP Management System(Mini Project)";
             // 
-            // createGroupToolStripMenuItem
+            // tableLayoutPanel1
             // 
-            this.createGroupToolStripMenuItem.Name = "createGroupToolStripMenuItem";
-            this.createGroupToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.createGroupToolStripMenuItem.Text = "Create Group";
-            this.createGroupToolStripMenuItem.Click += new System.EventHandler(this.createGroupToolStripMenuItem_Click);
-            // 
-            // addGroupToolStripMenuItem
-            // 
-            this.addGroupToolStripMenuItem.Name = "addGroupToolStripMenuItem";
-            this.addGroupToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addGroupToolStripMenuItem.Text = "Add Group";
-            this.addGroupToolStripMenuItem.Click += new System.EventHandler(this.addGroupToolStripMenuItem_Click);
-            // 
-            // groupProjectsToolStripMenuItem
-            // 
-            this.groupProjectsToolStripMenuItem.Name = "groupProjectsToolStripMenuItem";
-            this.groupProjectsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.groupProjectsToolStripMenuItem.Text = "Group Projects";
-            this.groupProjectsToolStripMenuItem.Click += new System.EventHandler(this.groupProjectsToolStripMenuItem_Click);
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 52);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(111, 209);
+            this.tableLayoutPanel1.TabIndex = 9;
             // 
             // MyHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 261);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MyHome";
@@ -217,6 +232,7 @@
             this.Load += new System.EventHandler(this.MyHome_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +257,6 @@
         private System.Windows.Forms.ToolStripMenuItem createGroupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addGroupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem groupProjectsToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
