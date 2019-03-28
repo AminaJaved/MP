@@ -52,17 +52,6 @@ namespace MiniProject
             sc.ExecuteNonQuery();
             connect.Close();
             MessageBox.Show("Hurray its Added sucessfully");
-            //SqlConnection connect = new SqlConnection(ConnectionString);
-            //connect.Open();
-            //if (connect.State == ConnectionState.Open)
-            //{
-
-            //    string s = "INSERT INTO ProjectAdvisor(AdvisorId,ProjectId, AdvisorRole,AssignmentDate)VALUES('" + comboBox1.Text + "','" + comboBox2.Text + "', (SELECT Id FROM Lookup WHERE Lookup.Value = '" + (comboBox3.Text) + "') ,'" + Convert.ToDateTime(dateTimePicker1.Value) + "');";
-            //    SqlCommand cmd = new SqlCommand(s, connect);
-            //    cmd.ExecuteNonQuery();
-            //    MessageBox.Show("Data Inserted Successfully");
-
-            //}
         }
 
         private void ProjectAdvisor_Load(object sender, EventArgs e)

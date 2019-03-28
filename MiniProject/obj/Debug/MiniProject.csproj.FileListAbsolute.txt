@@ -18,3 +18,5 @@ D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.GroupEvaluation
 D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.ProjectAdvisor.resources
 D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.AddGroup.resources
 D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.Group_Project.resources
+D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.Report1.resources
+D:\VS2015\Projects\MiniProject\MiniProject\obj\Debug\MiniProject.Report2.resources

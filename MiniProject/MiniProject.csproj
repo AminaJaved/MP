@@ -117,6 +117,20 @@
     <Compile Include="ProRecords.Designer.cs">
       <DependentUpon>ProRecords.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs" />
+    <Compile Include="Report2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2.Designer.cs">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportClass.cs" />
     <Compile Include="StdRecords.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +179,12 @@
     </Compile>
     <EmbeddedResource Include="ProRecords.resx">
       <DependentUpon>ProRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.resx">
+      <DependentUpon>Report2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StdRecords.resx">
       <DependentUpon>StdRecords.cs</DependentUpon>

@@ -34,14 +34,6 @@ namespace MiniProject
                 return l;
             }
         }
-        private void cleartextBox()
-        {
-            studendID = 0;
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-        }
         private void homeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             MyHome l = MyHome.getInstance();
@@ -111,38 +103,7 @@ namespace MiniProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (studendID > 0)
-            {
-                SqlCommand sc = new SqlCommand("Update Person SET FirstName= @FirstName,LastName=@LastName,Contact=@Contact,Email=@Email,DateOfBirth=@DateOfBirth,Gender=@Gender where Id=@ID ", connect);
-                sc.CommandType = CommandType.Text;
-                sc.Parameters.AddWithValue("@FirstName", textBox1.Text);
-                sc.Parameters.AddWithValue("@LastName", textBox2.Text);
-                sc.Parameters.AddWithValue("@Contact", textBox3.Text);
-                sc.Parameters.AddWithValue("@Email", textBox4.Text);
-                sc.Parameters.AddWithValue("@ID", this.studendID);
-                sc.Parameters.AddWithValue("@DateOfBirth", dateTimePicker1.Value);
-                int gender;
-                if (radioButton1.Checked == true)
-                {
-                    gender = 1;
-                }
-                else
-                {
-                    gender = 2;
-                }
-                sc.Parameters.AddWithValue("@Gender", gender);
-                connect.Open();
-                sc.ExecuteNonQuery();
-                connect.Close();
-                MessageBox.Show("The Record is Updated Successfully", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                
-                cleartextBox();
-            }
-            else
-            {
-                MessageBox.Show("Wil you please Select a Student for updation", "Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+ 
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -150,26 +111,6 @@ namespace MiniProject
            
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (studendID > 0)
-            {
-                SqlCommand sc = new SqlCommand("Delete Person where Id=@ID ", connect);
-                sc.CommandType = CommandType.Text;
-                sc.Parameters.AddWithValue("@ID", this.studendID);
 
-                connect.Open();
-                sc.ExecuteNonQuery();
-                connect.Close();
-                MessageBox.Show("Record Deleted Successfully", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                
-                cleartextBox();
-            }
-            else
-            {
-                MessageBox.Show("Select a Student to Delete", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
     }
 }

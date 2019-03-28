@@ -157,5 +157,26 @@ namespace MiniProject
             this.Hide();
 
         }
+
+        private void rubricToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void report1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Report1 l = Report1.getInstance();
+            l.Show();
+            this.Hide();
+
+        }
+
+        private void report2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Report2 l = Report2.getInstance();
+            l.Show();
+            this.Hide();
+        }
     }
 }
